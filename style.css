@@ -1,0 +1,18 @@
+#red:hover
+{
+    color: yellow;
+}
+#red
+{   
+    color: white;
+    text-decoration: none;
+}
+#mix
+{
+    display: float;
+    overflow: hidden;
+}
+img
+{
+    width: 100%;
+}

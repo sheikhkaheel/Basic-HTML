@@ -1,0 +1,57 @@
+
+#red
+{
+    text-decoration: none;
+    color: red;
+}
+#red:hover
+{
+    color: yellow;
+}
+
+#mix
+{
+    position: relative;
+}
+
+.bg-img
+{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    filter: brightness(0.6);
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#par
+{   
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+    top: 350px;
+    left: 50%;
+
+}
+.abt1
+{
+    color: aliceblue;
+}
+
+.button
+{
+    position: absolute;
+    top: 90%;
+    left:50%;
+    -ms-transform: translate(-90%,-50%) ;
+    transform: translate(-90%,-50%);
+}
+.container
+{
+    text-align: center;
+}

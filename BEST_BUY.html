@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="BEST_BUY.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="BEST_BUY.css">
+    <style>
+        form {
+            border: 1px;
+            border-style: solid;
+            padding: 30px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+
+        a {
+            border-radius: 5px;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        form {
+            margin-top: 100px;
+        }
+
+        .container {
+            width: 400px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        #button:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="index.html" name="myForm" onsubmit="return validateForm()">
+            <h3>Login</h3>
+            <hr>
+            <label class="form-label mb-3" for="email">Email:</label>
+            <input class="form-control mb-3" type="email" id="email" name="email">
+            <label class="form-label mb-3" for="password">Password:</label>
+            <input class="form-control mb-3" type="password" id="password" name="password">
+            <button value="Login" onclick="reDirect();" class="btn btn-primary mb-3 form-control" id="button" type="submit">Submit</button>
+            <br>
+            <a href="#">forget password</a>
+        </form>
+    </div>
+    <script>
+        
+        function validateForm() {
+            var email = document.forms["myForm"]["email"].value;
+            var password = document.forms["myForm"]["password"].value;
+            // check if email and password are empty
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            if (password == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            if (password.length < 6) 
+            {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+            // check if email and password match the given values
+            if ((email != "sheikhkaheel@gmail.com" || email != "fncgaming2015@gmail.com") && password != "kaheel") {
+                alert("Invalid email or password");
+                return false;
+            }
+            // if everything is valid, return true
+            return true;
+        }
+
+        function reDirect() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            if (email == "sheikhkaheel@gmail.com" && password == "kaheel") {
+                window.location.href = "/index.html";
+            }
+        }
+    </script>
+</body>
+</html>
