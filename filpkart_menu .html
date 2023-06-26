@@ -11,25 +11,33 @@
             height: 100vh;
         }
         ul{
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 200px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
             list-style-type: none;
+            border: 1px double yellowgreen;
+            color: aliceblue;
+            background-color: rgb(81, 145, 18);
+            border-radius:10px ;
         }
         img{
             width: 60px;
             height: 60px;
         }
         button{
-            margin-left: 48%;
+            margin-left: 44%;
             border-radius: 5px;
             background-color: rgb(16, 137, 16);
             padding: 10px;
             width: 80px;
             font-size: 18px;
             color: white;
-            border: 1px solid green;
+            border: 0px solid green;
+            text-shadow: 2px 2px 2px black;
             box-shadow: 5px 5px 5px darkgreen;
         }
     </style>
@@ -52,7 +60,7 @@
     </div>
     <script>
         $("button").click(function(){
-            $(".items").toggle(2000);
+            $(".items").toggle(5000);
         })
     </script>
 </body>
