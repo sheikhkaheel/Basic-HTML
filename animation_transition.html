@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div:hover {
+  width: 300px;
+          }
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition-timing-function: linear;
+  transition: width 2s;
+}
+
+.div2 
+    {
+    animation-timing-function: ease;
+    transition-timing-function: ease;
+    }
+.div3 
+    {
+    animation-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    }
+.div4 
+    {
+    animation-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    }
+.div5 
+    {
+    animation-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    }
+
+@keyframes example {
+  0%   {background-color:red;    left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue;   left:200px; top:200px;}
+  75%  {background-color:green;  left:0px; top:200px;}
+  100% {background-color:orchid;    left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Animation</h1>
+<p> <b>Speed Curve</b> of the AnimationSpeed Curve of the Animation</p>
+<div></div>
+<div class="div2"></div>
+<div class="div3"></div>
+<div class="div4"></div>
+<div class="div5"></div>
+</body>
+</html>
