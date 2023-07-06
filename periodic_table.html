@@ -8,22 +8,31 @@
                 justify-content: space-between;
                 margin-top: 20px;
             }
+            table,tr,td{
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            table{
+                width: 100%;
+                height: 80%;
+                font-weight: bold;
+            }
             
         </style>
     </head>
     <body bgcolor="#888888">
         <h2> Periodic Table</h2>
         <div style="height: 100%; width: 100%;" >
-            <table border="1px">
+            <table>
                 <tr>
                     <td> <a href="periodic_table.html#H" title="Hydrogen">H</a> </td>
-                    <td colspan="16">&nbsp;&nbsp;</td>
+                    <td colspan="16" style="border-top-style: hidden;">&nbsp;&nbsp;</td>
                     <td>He</td>
                 </tr>
                 <tr>
                     <td>Li</td>
                     <td>Be</td>
-                    <td colspan="10"></td>
+                    <td colspan="10" style="border-top-style: hidden;"></td>
                     <td>B</td>
                     <td>C</td>
                     <td>N</td>
@@ -34,7 +43,7 @@
                 <tr>
                     <td>Na</td>
                     <td>Mg</td>
-                    <td colspan="10"></td>
+                    <td colspan="10" style="border-top-style: hidden;"></td>
                     <td>Al</td>
                     <td>Si</td>
                     <td>P</td>
@@ -122,11 +131,15 @@
                     <td>Ts</td>
                     <td>Og</td>
                 </tr>
-            </table>
-            <br>
-            <table border="1px">
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td colspan="18" style="border-left-style: hidden; border-right-style: hidden;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="border-right-style: hidden; border-bottom-style: hidden; border-top-style: hidden; border-left-style: hidden;"></td>
+                    <td rowspan="2" style="border-right-style: hidden; border-bottom-style: hidden; 
+                    border-top-style: hidden;"></td>
+                    <td rowspan="2" style="border-bottom-style: hidden; 
+                    border-top-style: hidden;"></td>
                     <td>Ce</td>
                     <td>Pr</td>
                     <td>Nd</td>
@@ -141,10 +154,9 @@
                     <td>Tm</td>
                     <td>Yb</td>
                     <td>Lu</td>
-                    <td>&nbsp;&nbsp;</td>
+                    <td rowspan="2" style="border-right-style: hidden; border-bottom-style: hidden; border-top-style: hidden;"></td>
                 </tr>
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>Th</td>
                     <td>Pa</td>
                     <td>U</td>
@@ -159,9 +171,10 @@
                     <td>Md</td>
                     <td>No</td>
                     <td>Lr</td>
-                    <td>&nbsp;&nbsp;</td>
                 </tr>
             </table>
+            <br>
+            
         </div>
         <br>
         <br>
