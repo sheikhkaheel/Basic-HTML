@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiple Choice Question</title>
+    </head>
+    <style>
+        table,tr,td{
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        table{
+            width: 400px;
+            margin-right: 15px;
+        }
+        td{
+            width: 40px;
+            padding: 10px;
+        }
+        fieldset{
+            padding-right: 2px; 
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        input[type=submit]{
+            padding: 5px;
+            border-radius: 5px;
+            border: 0px;
+            background-color: rgb(206, 206, 191);
+            color: rgb(99, 93, 93);
+        }
+        #tableWithbutton{
+            text-align: center;
+            margin-bottom: -8px;
+            margin-left: 33.3%;
+            border-style: hidden;
+        }
+        
+    </style>
+    <body>
+        <fieldset>
+            <legend style="text-align: center;">Multiple Choice Question</legend>
+            <form action="">
+                <div>
+                    <table>
+                        <tr>
+                            <td colspan="4">Q1: What does html represent?</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="html" value="A1"></td>
+                            <td colspan="3">Hype test make up language</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="html" value="A2"></td>
+                            <td colspan="3">Hype test mark up language</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="html" value="A3"></td>
+                            <td colspan="3">Hyper text mark up language</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="html" value="A4"></td>
+                            <td colspan="3">None of the above</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td colspan="4">Q2: Which is the most important tag in the HTML?</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="tag" value="A1"></td>
+                            <td colspan="3">paragraph tag</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="tag" value="A2"></td>
+                            <td colspan="3">header tag</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="tag" value="A3"></td>
+                            <td colspan="3">html tag</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="tag" value="A4"></td>
+                            <td colspan="3">anchor tag</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td colspan="4">Q3: What is the general convention in form tag?</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="tag" value="A1"></td>
+                            <td colspan="3">Type can be same</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="tag" value="A2"></td>
+                            <td colspan="3">Name is always unique</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="tag" value="A3"></td>
+                            <td colspan="3">Value can't be same</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="tag" value="A4"></td>
+                            <td colspan="3">None of the above</td>
+                        </tr>
+                    </table>
+                </div>
+                <table id="tableWithbutton">
+                    <tr>
+                        <td id="inputBorder"><input type="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+    </body>
+</html>
