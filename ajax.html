@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Using ajax</title>
+    </head>
+    <style>
+        div{
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 10px; 
+            color: white;
+        }
+    </style>
+    <script src="jquery-3.7.0.min.js"></script>
+    <body>
+            <div id="kaheel"></div>
+            <button id="clickHere">Click</button>
+            <button id="color">ChangeColor</button>
+    </body>
+    <script>
+        function justdoit()
+        {
+            $.ajax(
+                {   
+                    url:"https://baconipsum.com/api/?type=meat-and-filer",
+                    success:function(data){
+                        $("#kaheel").html(data);
+                    },
+                    error:function(){
+                        $("#kaheel").html("error");
+                    }
+                }
+            )
+        }
+        $("#clickHere").click(justdoit);
+
+        $("#color").click(function(){
+            $("div").css("background-color","#252525")
+        })
+    </script>
+</html>
