@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>MY Details</title>
+    </head>
+    <body>
+        <form action="">
+            <table>
+                <tr>
+                    <td colspan="4"><b>MY Details</b></td>
+                </tr>
+                <tr>
+                    <td><fieldset>
+                        <legend>Personal Delails</legend>
+                        <table>
+                            <tr>
+                                <td>First Name</td>
+                                <td>:</td>
+                                <td colspan="2"><input type="text" name="fname"></td>
+                            </tr>
+                            <tr>
+                                <td>Last Name</td>
+                                <td>:</td>
+                                <td colspan="2"><input type="text" name="lname"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="radio" name="gender" value="M"></td>
+                                <td colspan="2">Male</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="radio" name="gender" value="F"></td>
+                                <td colspan="2">Female</td>
+                            </tr>
+                        </table>
+                    </fieldset></td>
+                </tr>
+                <tr>
+                    <td><fieldset>
+                        <legend>Address</legend>
+                        <table>
+                            <tr>
+                                <td>Country</td>
+                                <td>:</td>
+                                <td colspan="2">
+                                    <select name="country">
+                                        <option value="0">--Select a country--</option>
+                                        <option value="1">IND</option>
+                                        <option value="2">PAK</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>State</td>
+                                <td>:</td>
+                                <td colspan="2">
+                                    <select name="state">
+                                        <option value="0">--Select a state--</option>
+                                        <option value="1">J&K</option>
+                                        <option value="2">Dehli</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>District</td>
+                                <td>:</td>
+                                <td colspan="2">
+                                    <select name="district">
+                                        <option value="0">--Select a district--</option>
+                                        <option value="1">Srinagar</option>
+                                        <option value="2">Anatnag</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Address</td>
+                                <td colspan="2"><input type="text" name="address"></td>
+                            </tr>
+                        </table>
+                    </fieldset></td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Hobbies</legend>
+                            <table>
+                                <tr>
+                                    <td><input type="checkbox" name="cric" value="cric"></td>
+                                    <td colspan="3">Cricket</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="basket" value="basket"></td>
+                                    <td colspan="3">Basket Ball</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="foot" value="foot"></td>
+                                    <td colspan="3">Football</td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4"><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
