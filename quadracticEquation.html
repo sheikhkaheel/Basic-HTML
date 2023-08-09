@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quadratic Equation</title>
+    </head>
+    <body>
+        <script>
+            let a,b,c,D,root1,root2;
+            a = prompt(`Enter any number`);
+            b = prompt(`Enter any number`);
+            c = prompt(`Enter any number`);
+            D = (b**2) - 4*a*c;
+            if(D>0)
+            {
+                root1 = (-b + Math.sqrt(D))/2*a;
+                root2 = (-b - Math.sqrt(D))/2*a;
+                document.write(`Roots are ${root1} and ${root2}`);
+            }
+            else if(D===0)
+            {
+                root1 = root2 = -b/2*a;
+                document.write(`Roots are ${root1} and ${root2}`);
+            }
+            else
+            {
+                let realRoot = (-b/(2*a)).toFixed(2);
+                let imgRoot = (Math.sqrt(-D)/(2*a)).toFixed(2);
+                document.write(`Roots are ${realRoot} ${imgRoot}i and ${realRoot} ${imgRoot}i`);
+            }
+        </script>
+    </body>
+</html>
