@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Field Lable</h3>
+    <p></p>
+    <h3>Select Field Name</h3>
+    <p></p>
+    <h3>Data Type</h3>
+    <p></p>
+    <h3>Description</h3>
+    <p></p>
+    <p></p>
+    <script>
+        queryString = window.location.search;
+        urlparams = new URLSearchParams(queryString);
+
+        let Data1 = urlparams.get('ftxt');
+        let Data2 = urlparams.get('data');
+        let Data3 = urlparams.get('stxt');
+        let Data4 = urlparams.get('ttxt');
+        let Data5 = urlparams.get('submit');
+
+        let p0 = document.getElementsByTagName('p')[0].innerHTML = ` Data1 ; ${Data1}`;
+        let p1 = document.getElementsByTagName('p')[1].innerHTML = ` Data2 ; ${Data2}`;
+        let p2 = document.getElementsByTagName('p')[2].innerHTML = ` Data3 ; ${Data3}`;
+        let p3 = document.getElementsByTagName('p')[3].innerHTML = ` Data4 ; ${Data4}`;
+        let p4 = document.getElementsByTagName('p')[4].innerHTML = ` Data5 ; ${Data5}`;
+    </script>
+</body>
+
+</html>

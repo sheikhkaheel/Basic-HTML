@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Device1</title>
+        <style>
+            form{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+                box-shadow: 0 0 2px rgba(0, 0, 0,0.9);
+                width: 1200px;
+                padding: 25px;
+            }
+            label{
+                font-weight:600;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            input{
+                margin-bottom: 10px;
+                font-size: 20px;
+                width: 100%;
+                border-radius: 5px;
+                padding: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                border: 0px;
+            }
+            select{
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 10px;
+                width: 100.8%;
+                padding: 13px;
+                border: 0px;
+                border-radius: 5px;
+            }
+            span{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: 600;
+            }
+            input[type=checkbox]{
+                width: 20px;
+                margin-bottom: 25px;
+            }
+            input[type=submit]{
+                background-color: rgb(36, 136, 106);
+                border: 1px solid rgb(36, 136, 106);
+                color: white;
+            
+            }
+            h4{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+            }
+            body{
+                background-color: rgb(242, 236, 236);
+            }
+        </style>
+    </head>
+    <body>
+        <h4>Add Data Header</h4>
+        <form action="output.html">
+            <label>Field Lable</label> <br> <input type="text" name="ftxt"><br>
+
+            <label>Select Field Name</label> <br> 
+            <select name="data">
+                <option value="0">Data Name</option>
+                <option value="OtherOrdersNotes">OtherOrdersNotes</option>
+                <option value="Admission">Admission</option>
+                <option value="AdmistionNotes">AdmistionNotes</option>
+                <option value="AnticipatedDischargeDate">AnticipatedDischargeDate</option>
+                <option value="AttendingProvider">AttendingProvider</option>
+                <option value="ChargeNurse">ChargeNurse</option>
+            </select><br>
+
+            <label>Data Type</label> <br> <input type="text" name="stxt"><br>
+
+            <label>Discription</label> <br> <input type="text" name="ttxt"><br>
+
+            <input type="checkbox" name="submit" value="source"> <span>Source :: Is Auto</span> <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
