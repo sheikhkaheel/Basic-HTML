@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <style>
+        #error1{
+            color: red;
+            position: relative;
+            top: -98px;
+            left: 300px;
+        }
+        #error2{
+            color: red;
+            position: relative;
+            top: -58px;
+            left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://youtube.com">
+        First Name :
+        <input type="text" id="fname" name="fname"> <br> <br>
+        Last Name :
+        <input type="text" id="lname" name="lname"> <br> <br>
+
+        <input type="submit" id="button" value="Submit" onclick="return validateForm()"> <br>
+        <span id="error1" style="display: none;"></span>
+        <span id="error2" style="display: none;"></span>
+    </form>
+
+    <script>
+        function validateForm() {
+            let fname = document.getElementById('fname');       // fname = <input type="text" id="fname" name="fname">
+            let lname = document.getElementById('lname');       // lname = <input type="text" id="lname" name="lname">
+            let error1 = document.getElementById('error1');     // error1 = <span id="error1 style = "display:none"></span>
+            let error2 = document.getElementById('error2');     // error2 = <span id="error2 style = "display:none"></span>
+            let button = document.getElementById('button');     // button = <button id="button>Submit</button>
+
+                if (fname.value.length < 8 && fname.value.length < 2) {                          // checks if length of fname is equal to 8 characters or not
+                    alert('First Name must be at least 8 characters and minimum of 2 characters');
+                    return false;
+                }
+                if (fname.value != 'sheikh') {                                                   // checks if fname contains sheikh
+                    error1.style.display = 'block';
+                    error1.innerHTML = '* Wrong first name';
+                    return false;
+                }
+                else{
+                    error1.style.display = 'none';
+                }
+                if (lname.value.length < 8 && lname.value.length < 2) {                          // checks if length of lname is equal to 8 characters or not
+                    alert('Last Name must be at least 8 characters and minimum of 2 characters');
+                    return false;
+                }
+                if (lname.value != 'kaheel' && lname.value != 'kafeel') {                        // checks if fname contains kaheel or kafeel
+                    error2.style.display = 'block';
+                    error2.innerHTML = '* Wrong last name';
+                    return false;
+                }
+                else{
+                    error2.style.display = 'none';
+                }
+                flag = true;
+            
+        }
+    </script>
+
+</body>
+
+</html>
