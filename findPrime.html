@@ -11,26 +11,34 @@
 </body>
     <script>
 
-        //created input tag
+        //created input2 tag
 
-        let input = document.createElement('input');
-        input.type = 'number';
-        input.placeholder = "Give Limit";
-        input.classList.add('form-control','m-2', 'text-center')
-        document.body.append(input);
+        let input1 = document.createElement('input');
+        let input2 = document.createElement('input');
+        input1.type = 'number';
+        input2.type = 'number';
+        input1.placeholder = "Start";
+        input2.placeholder = "End";
+        input1.classList.add('form-control','m-3', 'text-center')
+        input2.classList.add('form-control','m-3', 'text-center')
+        document.body.append(input1);
+        document.body.append(input2);
 
+        //body Styling
+        document.body.classList.add('h-100','w-100', 'text-center');
+        
         // created button
         let button = document.createElement('button');
         button.innerHTML = "Get List";
-        button.classList.add('form-control','btn-primary');
+        button.classList.add('form-control','btn-primary','m-3');
         document.body.append(button);
         button.addEventListener('click',()=>{
             let start,i,flag;
-            let limit = parseInt(input.value);
+            let limit = parseInt(input2.value);
 
             debugger;
 
-            for(let start = 1; start <= limit; start++){
+            for(let start = parseInt(input1.value); start <= limit; start++){
                 span = document.createElement('span');
                 i = 2,flag = 0;
                 while(i < start){
