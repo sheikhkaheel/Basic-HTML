@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <h2 class="text-center">Prime -no list</h2>
+</body>
+    <script>
+
+        //created input tag
+
+        let input = document.createElement('input');
+        input.type = 'number';
+        input.placeholder = "Give Limit";
+        input.classList.add('form-control','m-2', 'text-center')
+        document.body.append(input);
+
+        // created button
+        let button = document.createElement('button');
+        button.innerHTML = "Get List";
+        button.classList.add('form-control','btn-primary');
+        document.body.append(button);
+        button.addEventListener('click',()=>{
+            let start,i,flag;
+            let limit = parseInt(input.value);
+
+            debugger;
+
+            for(let start = 1; start <= limit; start++){
+                span = document.createElement('span');
+                i = 2,flag = 0;
+                while(i < start){
+                    if(start % i == 0){
+                        span.innerHTML = ' ' + start + '  is Not Prime,'
+                        flag = 1;
+                        break;
+                    }
+                    i++;
+                }
+                if(flag != 1){
+                    span.innerHTML = ' ' + start + ' is Prime,';
+                }
+                document.body.append(span);
+            }
+        
+            
+            
+        })
+    </script>
+</html>
