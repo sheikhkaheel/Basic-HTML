@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
-    <h2 class="text-center">Prime -no list</h2>
+    <h2 class="text-center text-primary">Prime Number - List</h2>
 </body>
     <script>
 
@@ -19,8 +19,8 @@
         input2.type = 'number';
         input1.placeholder = "Start";
         input2.placeholder = "End";
-        input1.classList.add('form-control','m-3', 'text-center')
-        input2.classList.add('form-control','m-3', 'text-center')
+        input1.classList.add('form-control','my-4', 'text-center')
+        input2.classList.add('form-control','my-4', 'text-center')
         document.body.append(input1);
         document.body.append(input2);
 
@@ -30,7 +30,7 @@
         // created button
         let button = document.createElement('button');
         button.innerHTML = "Get List";
-        button.classList.add('form-control','btn-primary','m-3');
+        button.classList.add('form-control','btn-primary','my-4');
         document.body.append(button);
         button.addEventListener('click',()=>{
             let start,i,flag;
@@ -43,7 +43,7 @@
                 i = 2,flag = 0;
                 while(i < start){
                     if(start % i == 0){
-                        span.innerHTML = ' ' + start + '  is Not Prime,'
+                        // span.innerHTML = ' ' + start + '  is Not Prime,'
                         flag = 1;
                         break;
                     }
