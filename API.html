@@ -9,28 +9,51 @@
 </head>
 
 <body>
+
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" placeholder="Enter any country name" class="country form-control my-2">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <input type="submit" class="btn clickMe btn-success form-control">
+                </div>
+            </div>
+        </form>
+        <div id="data" class="container bg-light p-3 d-none">
+            <img src="" alt=""> 
+            <span class="mx-2"></span>
+        </div>
+
+    </div>
+
+
+
     <script>
-        let input = document.createElement('input');
-        input.placeholder = 'Enter any country name';
-        input.classList.add('my-2', 'form-control',);
-        document.body.append(input);
+        let input = document.querySelector('.country');
+        let btn = document.querySelector('.clickMe');
+        let img = document.querySelector('img');
+        let span = document.querySelector('span');
+        let div = document.querySelector('#data');
+        div.appendChild(img);
 
-        let button = document.createElement('button');
-        button.innerHTML = 'Get'
-        button.classList.add('btn', 'btn-primary',);
-        button.style.margin = '10px 46%'
-        document.body.append(button);
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+        });
 
-        let img = document.createElement('img');
-        img.classList.add('bg-light', 'border', 'mx-5');
-        document.body.append(img);
-
-
-        button.addEventListener('click', () => {
+        btn.addEventListener('click', () => {
+            div.classList.remove('d-none');
             const URL = `https://restcountries.com/v3.1/name/${input.value}`;
             fetch(URL)
                 .then(request => request.json())
-                .then(data => img.src = data[0].flags.png)
+                .then(data => {
+                    span.innerHTML = data[0].name.common
+                    img.src = data[0].flags.png
+                    console.log(data)
+                })
                 .catch(err => alert(err.message));
         })
 
