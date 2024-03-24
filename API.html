@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+    <script>
+        let input = document.createElement('input');
+        input.placeholder = 'Enter any country name';
+        input.classList.add('my-2', 'form-control',);
+        document.body.append(input);
+
+        let button = document.createElement('button');
+        button.innerHTML = 'Get'
+        button.classList.add('btn', 'btn-primary',);
+        button.style.margin = '10px 46%'
+        document.body.append(button);
+
+        let img = document.createElement('img');
+        img.classList.add('bg-light', 'border', 'mx-5');
+        document.body.append(img);
+
+
+        button.addEventListener('click', () => {
+            const URL = `https://restcountries.com/v3.1/name/${input.value}`;
+            fetch(URL)
+                .then(request => request.json())
+                .then(data => img.src = data[0].flags.png)
+                .catch(err => alert(err.message));
+        })
+
+    </script>
+</body>
+
+</html>
