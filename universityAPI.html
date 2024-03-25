@@ -10,7 +10,11 @@
 
 <body>
     <div class="container">
+
+
+
         <h2 class="text-dark italic">API To Find Unversities</h2>
+        <select name="country" id="country" class="p-1 text-secondary text-center"></select>
         <input type="text" class="p-1 mt-2 w-50" placeholder="Enter any country's full name" id="search">
         <button id="btn" class="btn-secondary border rounded p-1">Get Info</button>
         <div id="counrtyName" class="text-center fw-bold my-3 text-success text-uppercase"></div>
@@ -18,21 +22,46 @@
     </div>
 
     <script>
+        let dropdown = document.querySelector('#country');
         let input = document.querySelector('#search');
         let btn = document.querySelector('#btn');
         let div = document.querySelector('#content');
         let countryName = document.querySelector('#counrtyName');
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('https://restcountries.com/v3.1/all')
+                .then(response => response.json())
+                .then(data => {
+                    for (let i = 0; i < data.length; i++) {
+                        let options = document.createElement('option');
+                        options.value = data[i].name.common;
+                        options.innerHTML = data[i].name.common;
+                        dropdown.appendChild(options);
+                    }
+                })
+                .catch('Failed to get countries')
+        });
+
+        dropdown.addEventListener('change', function(event){
+            input.value = event.target.value
+            input.disabled = true
+        });
+
         btn.addEventListener('click', function () {
             const URL = `http://universities.hipolabs.com/search?country=${input.value}`;
-
             fetch(URL)
                 .then(response => response.json())
                 .then(data => {
+                    for(let i = 0; i < div.children.length; i++){
+                        div.children[i].remove();
+                    }
                     console.log((data));
                     for (let i = 0; i < data.length; i++) {
                         let universities = document.createElement("div");
-                        countryName.innerText = " Universities In" + " " +data[i].country
-                        universities.innerText = i+1. + "  " +  data[i].name
+                        countryName.innerText = " Universities In" + " " + data[i].country
+                        universities.innerText = i + 1. + "  " + data[i].name
                         div.appendChild(universities);
                     }
                 })
