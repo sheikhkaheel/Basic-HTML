@@ -11,9 +11,9 @@
 <body>
     <div class="container">
         <h2 class="text-dark italic">API To Find Unversities</h2>
-        <input type="text" class="p-1 mt-2" placeholder="Enter any country name" id="search">
+        <input type="text" class="p-1 mt-2 w-50" placeholder="Enter any country's full name" id="search">
         <button id="btn" class="btn-secondary border rounded p-1">Get Info</button>
-        <div id="counrtyName" class="text-center fw-bold text-success text-uppercase"></div>
+        <div id="counrtyName" class="text-center fw-bold my-3 text-success text-uppercase"></div>
         <div id="content" class="container d-flex flex-wrap flex-column gap-1 text-secondary"></div>
     </div>
 
@@ -36,7 +36,7 @@
                         div.appendChild(universities);
                     }
                 })
-                .catch(error => { console.log("Failed to fetch Data"); })
+                .catch(error => { alert("Failed to find this country"); })
         })
     </script>
 </body>
