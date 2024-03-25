@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-dark italic">API To Find Unversities</h2>
+        <input type="text" class="p-1 mt-2" placeholder="Enter any country name" id="search">
+        <button id="btn" class="btn-secondary border rounded p-1">Get Info</button>
+        <div id="counrtyName" class="text-center fw-bold text-success text-uppercase"></div>
+        <div id="content" class="container d-flex flex-wrap flex-column gap-1 text-secondary"></div>
+    </div>
+
+    <script>
+        let input = document.querySelector('#search');
+        let btn = document.querySelector('#btn');
+        let div = document.querySelector('#content');
+        let countryName = document.querySelector('#counrtyName');
+        btn.addEventListener('click', function () {
+            const URL = `http://universities.hipolabs.com/search?country=${input.value}`;
+
+            fetch(URL)
+                .then(response => response.json())
+                .then(data => {
+                    console.log((data));
+                    for (let i = 0; i < data.length; i++) {
+                        let universities = document.createElement("div");
+                        countryName.innerText = " Universities In" + " " +data[i].country
+                        universities.innerText = i+1. + "  " +  data[i].name
+                        div.appendChild(universities);
+                    }
+                })
+                .catch(error => { console.log("Failed to fetch Data"); })
+        })
+    </script>
+</body>
+
+</html>
