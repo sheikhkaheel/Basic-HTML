@@ -10,20 +10,25 @@
 
 <body>
     <div class="container">
-
-
-
         <h2 class="text-dark italic">API To Find Unversities</h2>
         <select name="country" id="country" class="p-1 text-secondary text-center"></select>
         <input type="text" class="p-1 mt-2 w-50" placeholder="Enter any country's full name" id="search">
         <button id="btn" class="btn-secondary border rounded p-1">Get Info</button>
-        <div id="counrtyName" class="text-center fw-bold my-3 text-success text-uppercase"></div>
+        <div class="row">
+            <div class="col-8">
+                <div id="counrtyName" class="text-center fw-bold my-3 text-success text-uppercase"></div>
+            </div>
+            <div class="col-4 my-3">
+                <img id="countryImg" class="d-none" style="width: 2.5rem; height: 2rem;">
+            </div>
+        </div>
         <div id="content" class="container d-flex flex-wrap flex-column gap-1 text-secondary"></div>
     </div>
 
     <script>
         let dropdown = document.querySelector('#country');
         let input = document.querySelector('#search');
+        let img = document.querySelector('#countryImg');
         let btn = document.querySelector('#btn');
         let div = document.querySelector('#content');
         let countryName = document.querySelector('#counrtyName');
@@ -41,7 +46,7 @@
                         dropdown.appendChild(options);
                     }
                 })
-                .catch('Failed to get countries')
+                .catch(error => alert('Failed to get countries'));
         });
 
         dropdown.addEventListener('change', function (event) {
@@ -50,6 +55,14 @@
         });
 
         btn.addEventListener('click', function () {
+            fetch(`https://restcountries.com/v3.1/name/${input.value}`)
+            .then(response => response.json())
+            .then(data => {
+                img.src = data[0].flags.png 
+                img.classList.remove('d-none');
+            })
+            .catch(error => alert(`Failed to search the flag of country ${input.value}`));
+
             const URL = `http://universities.hipolabs.com/search?country=${input.value}`;
             fetch(URL)
                 .then(response => response.json())
@@ -66,7 +79,7 @@
                         div.appendChild(universities);
                     }
                 })
-                .catch(error => { alert("Failed to find this country"); })
+                .catch(error => { alert("Failed to find this university"); })
         })
     </script>
 </body>
