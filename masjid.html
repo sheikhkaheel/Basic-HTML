@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masjid</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="jquery-3.7.0.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="masjid.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
+
+    <style>
+        .main-header {
+            padding-top: 10rem;
+            height: 33.7rem;
+            z-index: 9999;
+            background: url("https://images.pexels.com/photos/2236674/pexels-photo-2236674.jpeg?auto=compress&cs=tinysrgb&w=600");
+            background-size: cover;
+            width: 100%;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+
+        .service-item {
+            border: 2px solid transparent;
+            padding: 1rem;
+            background-color: #36A95C;
+            border-radius: 45px 20px !important;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-ligt sticky-top">
+                <a class="navbar-brand" href="#">
+                    <img width="30rem" height="30rem"
+                        src="https://www.bing.com/th?id=OIP.sKZPr65zUjuJc-URMr-sDAHaDD&w=248&h=102&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
+                        alt="" style="border-radius: 1rem;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <div class="header-info d-flex justify-content-center">
+            <div class="main-header text-center">
+                <h1 class="text-white font-weight-bold">
+                    <Hamza class="text-danger"><span>Masjid Hamza</span>
+                </h1>
+                <h3 class="text-white">Illahi Bagh Near Marriage Hall <b>190020</b></h3>
+                <h6 class="text-white">Established in <span class="bg-danger border rounded p-1">1940</span></h6>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center"><i>Services We Offer</i></h1>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col mx-1 service-item">
+                    <div class="text-center"><i class="fa-solid fa-skull" style="font-size: 4rem;"></i></div>
+                    <h3>Funeral Services</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis officiis vitae animi blanditiis quisquam modi cupiditate quaerat iure quam?</p>
+                </div>
+                <div class="col service-item">
+                    <h3>Funeral Services</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis officiis vitae animi blanditiis quisquam modi cupiditate quaerat iure quam?</p>
+                </div>
+                <div class="col mx-1 service-item">
+                    <h3>Funeral Services</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis officiis vitae animi blanditiis quisquam modi cupiditate quaerat iure quam?</p>
+                </div>
+                <div class="col mx-1 service-item">
+                    <h3>Funeral Services</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis officiis vitae animi blanditiis quisquam modi cupiditate quaerat iure quam?</p>
+                </div>
+                
+            </div>
+            <!-- <div class="row" style="background-color: #ffffff;">
+                <div class="col-lg-6 col-12 d-flex flex-column px-5">
+                    <div class="row">
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"><i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"> <i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"><i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"> <i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"><i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"> <i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"><i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"> <i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"><i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+
+                        <div class="col py-3 rounded-3 mx-1 my-2 rounded mb-2 text-center service-item"> <i
+                                style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b></b><span> 32</span></div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-12">
+                    <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true"
+                        centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50"
+                        coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="3"
+                        coverflow-effect-slide-shadows="true">
+                        <swiper-slide>
+                            <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+
+            </div>
+        </div> -->
+    </main>
+
+</body>
+
+</html>

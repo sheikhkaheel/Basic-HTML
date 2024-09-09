@@ -50,8 +50,9 @@
             fetch(URL)
                 .then(request => request.json())
                 .then(data => {
+                    console.log(data);
                     span.innerHTML = data[0].name.common
-                    img.src = data[0].flags.png
+                    img.src = data[0].flags.svg
                     console.log(data)
                 })
                 .catch(err => alert(err.message));

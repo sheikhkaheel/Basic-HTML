@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="masjidDescription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="masjidDescription.js" defer></script>
+    <script src="bootstrap.min.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+         <div class="container-fluid d-flex">
+
+          <!--  <div>
+                <img src="https://www.bing.com/th?id=OIP.sKZPr65zUjuJc-URMr-sDAHaDD&w=248&h=102&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
+                class="header-img" alt="Mosque">
+            </div>
+            <div class="mx-4">
+                <h1 class="text-white pt-2">Masjid Hamza</h1>
+            <p class="text-white d-inline">Hawal Near Firdous Chenima <strong>190011</strong></p>
+            </div> -->
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+              </div>
+            </div>
+          </nav>
+
+        </div> 
+
+        
+
+    </header>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="large-img"
+                                src="https://th.bing.com/th?id=OIP.9JvPlF0p_welfc5R4YuCggHaE8&w=306&h=204&c=8&rs=1&qlt=30&o=6&dpr=1.5&pid=3.1&rm=2" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="large-img"
+                                src="https://th.bing.com/th/id/OIP.aC-ig14aGzwODxAGtLWV_wHaFj?w=266&h=199&c=7&r=0&o=5&dpr=3.5&pid=1.7" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="large-img"
+                                src="https://th.bing.com/th/id/OIP.R5Rd4m5u3TQgNSPp7Eg_XgHaE5?w=301&h=199&c=7&r=0&o=5&dpr=3.5&pid=1.7" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="large-img"
+                                src="https://th.bing.com/th?id=OIP.x7kqEQEec8dL5pDlSYJtfAHaFh&w=289&h=215&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="large-img"
+                                src="https://th.bing.com/th?id=OIP.hkURRmKxXWOEqnsPA-B-fgHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" />
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                </div>
+
+                <div class="swiper mySwiper mt-1" id="second-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="small-img"
+                                src="https://th.bing.com/th?id=OIP.9JvPlF0p_welfc5R4YuCggHaE8&w=306&h=204&c=8&rs=1&qlt=30&o=6&dpr=1.5&pid=3.1&rm=2" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="small-img"
+                                src="https://th.bing.com/th/id/OIP.aC-ig14aGzwODxAGtLWV_wHaFj?w=266&h=199&c=7&r=0&o=5&dpr=3.5&pid=1.7" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="small-img"
+                                src="https://th.bing.com/th/id/OIP.R5Rd4m5u3TQgNSPp7Eg_XgHaE5?w=301&h=199&c=7&r=0&o=5&dpr=3.5&pid=1.7" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="small-img"
+                                src="https://th.bing.com/th?id=OIP.x7kqEQEec8dL5pDlSYJtfAHaFh&w=289&h=215&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="small-img"
+                                src="https://th.bing.com/th?id=OIP.hkURRmKxXWOEqnsPA-B-fgHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-sm-12 d-flex flex-column">
+                <div class="row">
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"><i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"> <i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+                </div>
+                <div class="row">
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"><i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"> <i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+                </div>
+                <div class="row">
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"><i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"> <i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+                </div>
+                <div class="row">
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"><i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"> <i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+                </div>
+                <div class="row">
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"><i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+
+                    <div class="col py-4 rounded-3 mx-1 mb-2 text-center"> <i
+                            style="border: 0px solid; border-radius: 1rem;"
+                            class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- <div class="row">
+            <div class="col">
+                <div class="slider-container">
+                    <div class="slider">
+
+
+                        <div class="slider-item"><i style="border: 0px solid; border-radius: 1rem;"
+                                class="fa fa-bath mr-2 p-2 bg-success mx-2"></i><b>Washrooms</b><span> - 32</span>
+                             {{item.washRoom}} 
+                        </div>
+
+                        <div class="slider-item"><i style="border-radius: 1rem; padding: .55rem .7rem .55rem .7rem;"
+                                class='fas fa-toilet mr-2 bg-success mx-2'></i><b>Toilet</b><span> - 32</span>
+                            {{item.toilet}} 
+                        </div>
+
+                        <div class="slider-item"><i class='far fa-building mr-2 p-2 bg-success mx-2'
+                                style="border-radius: 1rem;"></i><b>Floor</b><span> - 32</span>  {{item.floor}}
+                        </div>
+
+                        <div class="slider-item"><i class='fas fa-fire-alt mr-2 p-2 bg-success mx-2'
+                                style="border-radius: 1rem;"></i><b>Sufa Available</b><span> - 32</span>
+                            {{.item.sufa}}
+                        </div>
+
+                        <div class="slider-item"><i class="bg-success mx-2 nav-icon fas fa-users mr-2"
+                                style="border-radius: 1rem; padding: .5rem .5rem .5rem .5rem;"></i><b>Capacity</b><span> - 32</span>
+                            22 {{item.capacity}}
+                        </div>
+
+                    </div>
+                </div>
+            </div> -->
+    </div>
+
+    <div class="row nimaz-item mb-3 mx-3">
+        <div class="col-12 col-lg-12 nimaz">
+
+            <div class="border row text-center">
+                <div class="col">Fajr</div>
+                <div class="col">5:40</div>
+            </div>
+            <div class="border row text-center">
+                <div class="col">Duhr</div>
+                <div class="col">1:15</div>
+            </div>
+            <div class="border row text-center">
+                <div class="col">Asr</div>
+                <div class="col">5:15</div>
+            </div>
+            <div class="border row text-center">
+                <div class="col">Magrib</div>
+                <div class="col">7:50</div>
+            </div>
+            <div class="border row text-center">
+                <div class="col">Isha</div>
+                <div class="col">8:30</div>
+            </div>
+            <div class="border row text-center">
+                <div class="col">Jummah</div>
+                <div class="col">1:15</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

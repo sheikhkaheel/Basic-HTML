@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Content Header (Page header) -->
+<section style="background: linear-gradient(to right, #28a745, #1184ff); ">
+
+  <div class="row" id="header">
+
+    <div style="display: flex; justify-content: center; flex-direction:row; align-items: center;">
+
+      <div id="header_logoImage">
+
+        <img id="bismillah" src="assets/img/Bismillah.png" />
+
+        <img id="sms_header_img" src="/assets/img/SMS_header_Login.png" />
+        <!--<p id="hijriDate">{{hijriDate}}</p>-->
+      </div>
+
+
+
+    </div>
+    <img id="heading_border" src="/assets/img/sms_border.png" />
+
+  </div>
+</section>
+<!-- Header Section End-->
+<!-- Text And Process Bar Start  -->
+<section class="content" id="SrchCont">
+
+
+  <div class="sec-title text-center">
+    <div class="progress" style="height: 5px; ">
+      <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemin="0"
+        aria-valuemax="100"></div>
+    </div>
+  </div>
+
+
+  <!-- Text And Process Bar End  -->
+  <!--   Search Button District And Masjid Name Start-->
+
+  <div class="container-fluid">
+
+    <form action="enhanced-results.html">
+
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col text-center">
+            <h4 style="color: #1ea369; font-size: 24px; font-weight: bold;" class="">Search Near By Masjids</h4>
+          </div>
+
+          <div class="col">
+
+            <div class="form-group">
+              <!-- removed (change)="getSelectedDistrictID($event)" -->
+              <select id="mySelectDistricts" (change)="getSelectedDistrictID($event) class=" btn btn-success my-sm-0" style="width: 100%; padding: .5rem 0rem;">
+                <option selected="selected">Select District</option>
+              </select>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-8"> <!-- This column will take up 50% width -->
+            <input type="search" class="form-control mr-sm-2" placeholder="Type your keywords here" id="themasjidName"
+              name="themasjidName" style="width: 100%;">
+          </div>
+
+          <div class="col-2"> <!-- This column will take up 25% width -->
+            <button id="searchBtn" (click)="masjidFilter() type="submit" class="btn btn-success my-sm-0" style="width: 100%;padding: .4rem;">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+
+          <div class="col-2"> <!-- This column will take up 25% width -->
+            <button type="button" onclick="history.back(-5)" class="btn btn-dark float-right"
+              style="width: 100%;padding: .4rem;">
+              <strong>Back</strong>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <!-- Search Button District And Masjid Name End -->
+
+
+  <!-- Masjid List Start -->
+
+  <div class="d-flex flex-lg-row flex-md-row flex-column" style="flex-wrap: wrap; flex: 1 0 33.33%;" *ngFor="let item of listMasjidDto">
+
+    <div class="container my-3 card bg-light"
+      style=" border-radius: 2rem; width: 23rem;transition: transform 0.3s ease-in-out; cursor: pointer;"
+      onmouseover="this.style.transform = 'scale(1.02)';" onmouseout="this.style.transform = 'scale(1)';">
+
+      <div class="row">
+        <div class="col">
+          <div class="card-header mt-2 text-muted border-bottom-0"
+            style="background-color: #14144d;border-top-left-radius: 2rem; border-top-right-radius: 2rem; color: aliceblue;">
+
+            <b style="color: #ffffff; font-size: .9rem;"> Ali Jan Road, Srinagar {{item.masjidName}}</b>
+
+            <span class="float-right " style="color: #ffffff;">
+              <i class='fas fa-map-marker-alt' style="margin-top:-.5rem; padding:.5rem .7rem .5rem .7rem; border-radius: 1rem; background-color: #5fa8fc;"></i>
+              <b style="color: #5fa8fc; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> لی جان روڈ، سرینگر</b>
+            </span>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <!-- removed [src]="item.profilePicture" -->
+          <img [src]="item.profilePicture"
+            style=" height: 18rem; width: 22rem;" class="img-fluid mb-2" />
+          <!-- removed src="/assets/img/no-image-icon-15.png" -->
+          <img *ngIf="!item.profilePicture"
+          src="/assets/img/no-image-icon-15.png" removed
+            style=" height: 18rem; width: 22rem;" class="img-fluid mb-2" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <i class="fa-solid fa-map p-2 bg-primary mb-3" style="border-radius: 1rem;"></i> Ali Jan Road, Srinagar
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <svg style="margin-top: -1rem;" class="w-100" height="10" viewBox="8 0 393 7" width="440" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m184.414 6.963-3.156-3.155 3.156-3.157 3.156 3.157z" fill="darkgreen"/><path d="m392.393 3.808h-176.391" stroke="green" stroke-linecap="round" stroke-width="1.144"/><path d="m208.551 6.963 3.155-3.155-3.155-3.157-3.156 3.157z" fill="darkgreen"/><g stroke="green" stroke-width="1.144"><path d="m.572 3.808h176.391" stroke-linecap="round"/><path d="m196.483 4.809-4.999-1 4.999-1 4.999 1z"/></g></g></svg>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col overflow-hidden">
+          <div class="row mb-2 mt-1">
+            <div class="col" style="font-size: .75rem;">
+              <div><i style="border: 0px solid; border-radius: 1rem;" class="fa fa-bath mr-2 p-2 bg-success"></i> <b> Washrooms</b>- 32 {{item.washRoom}}&nbsp;&nbsp; </div>
+            </div>
+            <div class="col" style="font-size: .75rem;">
+              <div><i style="border-radius: 1rem; padding: .55rem .7rem .55rem .7rem;" class='fas fa-toilet mr-2 bg-success'></i> <b>Toilet</b> - 22  {{item.toilet}}</div>
+            </div>
+          </div>
+
+          <div class="row mb-2" style="font-size: .75rem;">
+            <div class="col">
+              <div><i class='far fa-building mr-2 p-2 bg-success' style="border-radius: 1rem;"></i> <b>Floor</b> - 22 {{item.floor}}</div>
+            </div>
+            <div class="col" style="font-size: .75rem;">
+              <div><i class='fas fa-fire-alt mr-2 p-2 bg-success' style="border-radius: 1rem;"></i> <b>Sufa Available</b> - 22 {{.item.sufa}}</div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col" style="font-size: .75rem;">
+              <div><i class="bg-success nav-icon fas fa-users mr-2" style="border-radius: 1rem; padding: .5rem .5rem .5rem .5rem;"></i><b>Capacity</b> - 22 {{item.capacity}}</div>
+            </div>
+          </div>
+
+          <div class="col">
+            <svg style="margin-top: -1rem;" class="w-100" height="10" viewBox="8 0 393 7" width="440" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m184.414 6.963-3.156-3.155 3.156-3.157 3.156 3.157z" fill="darkgreen"/><path d="m392.393 3.808h-176.391" stroke="green" stroke-linecap="round" stroke-width="1.144"/><path d="m208.551 6.963 3.155-3.155-3.155-3.157-3.156 3.157z" fill="darkgreen"/><g stroke="green" stroke-width="1.144"><path d="m.572 3.808h176.391" stroke-linecap="round"/><path d="m196.483 4.809-4.999-1 4.999-1 4.999 1z"/></g></g></svg>
+          </div>
+
+          <div style="width: 21.5rem; margin-top: -1rem; color: rgb(120, 119, 119); font-size: .8rem;" class="text-center"><i
+              class="fa fa-file-pdf-o"></i>
+            <p class="mt-1" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; white-space: normal;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ipsam ea reiciendis, vero nihil
+              a pariatur perspiciatis consectetur! Odit rem accusamus animi perspiciatis, deserunt totam praesentium et
+              sed quidem reprehenderit.{{item.description.substring(0, item.description.indexOf('.') + 1)}}</p>
+            
+          </div>
+
+
+          <div class="col">
+            <svg style="margin-top: -3.5rem;" class="w-100" height="10" viewBox="8 0 393 7" width="440" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m184.414 6.963-3.156-3.155 3.156-3.157 3.156 3.157z" fill="darkgreen"/><path d="m392.393 3.808h-176.391" stroke="green" stroke-linecap="round" stroke-width="1.144"/><path d="m208.551 6.963 3.155-3.155-3.155-3.157-3.156 3.157z" fill="darkgreen"/><g stroke="green" stroke-width="1.144"><path d="m.572 3.808h176.391" stroke-linecap="round"/><path d="m196.483 4.809-4.999-1 4.999-1 4.999 1z"/></g></g></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-2" style="margin-top: -1rem;">
+        <div class="col mb-2">
+          <button type="button" class="btn bg-teal btn-sm py-2 btn-block" value="Registration As Muqtadi"
+            style="font-size: .78rem; border-bottom-left-radius: 1rem;">
+            <i class="fa fa-plus"></i> Assign Masjid
+          </button>
+        </div>
+
+        <div class="col mb-2">
+          <a [routerLink]="['/meeqat']" class="btn btn-sm py-2 btn-primary btn-block">
+            <i class="fas fa-time"></i> Meeqat Time
+          </a>
+        </div>
+
+        <div class="col mb-2">
+          <a class="btn py-2 btn-sm btn-success btn-block" style="border-bottom-right-radius: 1rem;">
+            <i class="fas fa-time"></i> More Details
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+<!-- Masjid List End-->
+<!-- Footer Section Start -->
+<div class="card-footer" style="background-color: #93d093;">
+
+  <strong>Copyright &copy; 2023-2025 &nbsp;<a
+      href="https://SalahManagementSystem.org">SalahManagementSystem[SMS]</a>.</strong>
+  All rights reserved.
+  <div class="float-right d-none d-sm-inline-block">
+    <b>Version</b> 1.0.0
+  </div>
+</div>
+<!-- Footer Section Start -->
+  
+</body>
+</html>

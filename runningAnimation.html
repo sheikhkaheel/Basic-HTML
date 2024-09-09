@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball{
+            align-content: center;
+            width: 60px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border-bottom: 0px;
+            border: 8px solid rgb(115, 199, 210);
+            animation-name: running;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;
+            transition: all ease-in-out;
+            border-color: rgb(28, 166, 185)  transparent;
+        }
+
+        @keyframes running {
+            0%{
+                translate: 0px;
+            }
+            50%{
+            }
+            100%{
+                rotate: 360deg;
+                translate: 75vw;
+            }
+        }
+
+        .box{
+            margin-top: 10px;
+            height: 40px;
+            aspect-ratio: 1;
+            border: 4px solid lightgrey;
+            animation-name:roll;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes roll {
+            0%{
+                translate: 0px;
+            }
+            25%{
+                rotate: 360deg;
+            }
+            75%{
+                rotate: -360deg;
+            }
+            100%{
+                translate: 78vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Running Animation</h1>
+    <div class="ball"></div>
+    <div class="box"></div>
+</body>
+</html>

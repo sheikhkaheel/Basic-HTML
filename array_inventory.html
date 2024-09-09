@@ -56,6 +56,7 @@
                 document.write(`For order no ${orderNo} Quantity ${Pquantity} * ${products[orderNo]}  = ${Pquantity * sellingPrice[orderNo]}₹ <br>`);
                 sum = sum + (sellingPrice[orderNo]*Pquantity);
                 let check = prompt(`If you want to continue buying type yes/no`);
+                check.toLowerCase();
                 if (check === "yes")                                 // continue buying
                 {
                     flag = true;
